@@ -1,9 +1,9 @@
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    background: #f9f9f9;
 }
 header.hero-section {
     background: url('hero.jpg') no-repeat center center/cover;
@@ -25,26 +25,91 @@ header .hero-btn {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    transition: background 0.3s ease;
+}
+header .hero-btn:hover {
+    background: #0056b3;
 }
 main {
     padding: 20px;
 }
 section {
     margin: 40px 0;
+    text-align: center;
 }
 section h2 {
-    text-align: center;
     margin-bottom: 20px;
+}
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
 }
 .services-section .service-item {
     background: #f4f4f4;
     padding: 20px;
-    margin: 10px 0;
+    margin: 10px auto;
+    max-width: 600px;
     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.portfolio-section .portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.portfolio-section .portfolio-item {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+.portfolio-section .portfolio-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+.portfolio-section .portfolio-item p {
+    text-align: center;
+    margin-top: 5px;
+}
+.contact-section form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+.contact-section label {
+    display: block;
+    margin-top: 10px;
+}
+.contact-section input, .contact-section textarea, .contact-section button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.contact-section button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 15px;
+}
+.contact-section button:hover {
+    background: #0056b3;
 }
 footer {
     text-align: center;
     padding: 10px;
     background: #333;
     color: white;
+    margin-top: 20px;
+}
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
 }
