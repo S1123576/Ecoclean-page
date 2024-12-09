@@ -1,17 +1,17 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "微軟正黑體", Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background: #f9f9f9;
+    background: #f3f3f3;
 }
 header.hero-section {
-    background: url('hero.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #fff;
     text-align: center;
 }
 header .hero-content {
@@ -22,7 +22,7 @@ header .hero-btn {
     margin-top: 20px;
     padding: 10px 20px;
     background: #007BFF;
-    color: white;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s ease;
@@ -39,13 +39,15 @@ section {
 }
 section h2 {
     margin-bottom: 20px;
+    color: #222;
 }
 .about-section p {
     max-width: 800px;
     margin: 0 auto;
+    color: #555;
 }
 .services-section .service-item {
-    background: #f4f4f4;
+    background: #fff;
     padding: 20px;
     margin: 10px auto;
     max-width: 600px;
@@ -58,18 +60,10 @@ section h2 {
     gap: 10px;
     justify-content: center;
 }
-.portfolio-section .portfolio-item {
-    flex: 1 1 calc(33.333% - 20px);
-    max-width: calc(33.333% - 20px);
-    box-sizing: border-box;
-}
 .portfolio-section .portfolio-item img {
     width: 100%;
     border-radius: 5px;
-}
-.portfolio-section .portfolio-item p {
-    text-align: center;
-    margin-top: 5px;
+    border: 1px solid #ddd;
 }
 .contact-section form {
     max-width: 500px;
@@ -79,6 +73,7 @@ section h2 {
 .contact-section label {
     display: block;
     margin-top: 10px;
+    color: #333;
 }
 .contact-section input, .contact-section textarea, .contact-section button {
     width: 100%;
@@ -90,7 +85,7 @@ section h2 {
 }
 .contact-section button {
     background: #007BFF;
-    color: white;
+    color: #fff;
     border: none;
     cursor: pointer;
     margin-top: 10px;
@@ -103,11 +98,11 @@ footer {
     text-align: center;
     padding: 10px;
     background: #333;
-    color: white;
+    color: #fff;
     margin-top: 20px;
 }
 footer a {
-    color: #007BFF;
+    color: #00d1ff;
     text-decoration: none;
 }
 footer a:hover {
