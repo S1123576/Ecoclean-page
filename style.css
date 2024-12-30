@@ -3,15 +3,15 @@ body {
     font-family: "微軟正黑體", Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background: #f3f3f3;
+    background: #f9f9f9;
 }
 header.hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: white;
     text-align: center;
 }
 header .hero-content {
@@ -21,14 +21,14 @@ header .hero-btn {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background: #007BFF;
-    color: #fff;
+    background: #28a745;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s ease;
 }
 header .hero-btn:hover {
-    background: #0056b3;
+    background: #218838;
 }
 main {
     padding: 20px;
@@ -41,7 +41,7 @@ section h2 {
     margin-bottom: 20px;
     color: #222;
 }
-.about-section p {
+.about-section p, .services-section .service-item p {
     max-width: 800px;
     margin: 0 auto;
     color: #555;
@@ -54,16 +54,17 @@ section h2 {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.portfolio-section .portfolio-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+.features-section ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
 }
-.portfolio-section .portfolio-item img {
-    width: 100%;
+.features-section ul li {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f4f4f4;
     border-radius: 5px;
-    border: 1px solid #ddd;
 }
 .contact-section form {
     max-width: 500px;
@@ -83,22 +84,22 @@ section h2 {
     border-radius: 5px;
     box-sizing: border-box;
 }
-.contact-section button {
-    background: #007BFF;
-    color: #fff;
+contact-section button {
+    background: #28a745;
+    color: white;
     border: none;
     cursor: pointer;
     margin-top: 10px;
     padding: 10px 15px;
 }
-.contact-section button:hover {
-    background: #0056b3;
+contact-section button:hover {
+    background: #218838;
 }
 footer {
     text-align: center;
     padding: 10px;
     background: #333;
-    color: #fff;
+    color: white;
     margin-top: 20px;
 }
 footer a {
@@ -108,3 +109,4 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
