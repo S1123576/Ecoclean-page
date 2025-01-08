@@ -5,68 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>到府收垃圾服務</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 </head>
 <body>
+    <!-- 首頁橫幅 -->
     <header class="hero-section">
-        <div class="language-switch">
-            <button id="lang-zh" class="lang-btn">中文</button>
-            <button id="lang-en" class="lang-btn">English</button>
-        </div>
         <div class="hero-content">
-            <h1 data-lang="zh">到府收垃圾服務</h1>
-            <h1 data-lang="en" style="display: none;">Home Garbage Collection Service</h1>
-            <p data-lang="zh">輕鬆解決垃圾清運的煩惱，享受更便利的生活</p>
-            <p data-lang="en" style="display: none;">Easily solve garbage disposal problems and enjoy a more convenient life</p>
-            <a href="#booking" class="hero-btn" data-lang="zh">立即預約</a>
-            <a href="#booking" class="hero-btn" data-lang="en" style="display: none;">Book Now</a>
+            <h1 id="hero-title">到府收垃圾服務</h1>
+            <p id="hero-description">輕鬆解決垃圾清運的煩惱，享受更便利的生活</p>
+            <a href="#services" class="hero-btn" id="hero-btn">立即預約</a>
+        </div>
+        <!-- 語言切換 -->
+        <div class="language-switch">
+            <button class="lang-btn" onclick="switchLanguage('zh')">中文</button>
+            <button class="lang-btn" onclick="switchLanguage('en')">English</button>
         </div>
     </header>
+
+    <!-- 主要內容 -->
     <main>
-        <!-- 關於我們 -->
-        <section id="about" class="about-section">
-            <h2 data-lang="zh">關於我們</h2>
-            <h2 data-lang="en" style="display: none;">About Us</h2>
-            <p data-lang="zh">我們專為現代忙碌人士及行動不便者提供到府收垃圾服務，讓您無需配合垃圾車的固定時間，享受更輕鬆的生活方式。</p>
-            <p data-lang="en" style="display: none;">We provide home garbage collection services tailored for busy individuals and those with limited mobility, freeing you from fixed garbage truck schedules.</p>
+        <!-- 關於服務 -->
+        <section id="services" class="services-section">
+            <h2 id="services-title">我們的服務</h2>
+            <p id="services-description">
+                提供即時上門收垃圾服務，解決現代人因忙碌無法配合垃圾車時間的煩惱，特別適合長者及行動不便者。
+            </p>
+            <a href="#booking" class="hero-btn" id="booking-btn">立即預約</a>
         </section>
 
-        <!-- 立即預約 -->
-        <section id="booking" class="booking-section">
-            <h2 data-lang="zh">立即預約</h2>
-            <h2 data-lang="en" style="display: none;">Book Now</h2>
-            <p data-lang="zh">填寫以下表單，快速預約到府垃圾清運服務。</p>
-            <p data-lang="en" style="display: none;">Fill out the form below to quickly book our home garbage collection service.</p>
-            <form action="success.html" method="POST">
-                <label for="name" data-lang="zh">姓名：</label>
-                <label for="name" data-lang="en" style="display: none;">Name:</label>
-                <input type="text" id="name" name="name" placeholder="您的姓名" required>
-                
-                <label for="phone" data-lang="zh">電話：</label>
-                <label for="phone" data-lang="en" style="display: none;">Phone:</label>
-                <input type="tel" id="phone" name="phone" placeholder="您的聯絡電話" required>
-                
-                <label for="address" data-lang="zh">地址：</label>
-                <label for="address" data-lang="en" style="display: none;">Address:</label>
-                <input type="text" id="address" name="address" placeholder="服務地址" required>
-                
-                <label for="date" data-lang="zh">預約日期：</label>
-                <label for="date" data-lang="en" style="display: none;">Booking Date:</label>
-                <input type="date" id="date" name="date" required>
-                
-                <label for="time" data-lang="zh">預約時間：</label>
-                <label for="time" data-lang="en" style="display: none;">Booking Time:</label>
-                <input type="time" id="time" name="time" required>
-                
-                <button type="submit" data-lang="zh">送出預約</button>
-                <button type="submit" data-lang="en" style="display: none;">Submit Booking</button>
-            </form>
+        <!-- 即時垃圾車追蹤 -->
+        <section id="tracking" class="tracking-section">
+            <h2 id="tracking-title">即時追蹤垃圾車</h2>
+            <p id="tracking-description">查看垃圾車的即時位置，讓您準備好交接垃圾。</p>
+            <div id="map" style="width: 100%; height: 400px;"></div>
+            <button id="update-location" class="hero-btn">模擬更新垃圾車位置</button>
+        </section>
+
+        <!-- 預約成功頁面 -->
+        <section id="booking-success" class="booking-success-section hidden">
+            <h2 id="success-title">預約成功！</h2>
+            <p id="success-description">您的垃圾清運已成功預約，我們的團隊將盡快為您服務。</p>
         </section>
     </main>
+
+    <!-- 頁腳 -->
     <footer>
-        <p>&copy; 2024 <span data-lang="zh">到府收垃圾服務</span><span data-lang="en" style="display: none;">Home Garbage Collection Service</span> | 
-        <a href="#contact" data-lang="zh">聯絡我們</a>
-        <a href="#contact" data-lang="en" style="display: none;">Contact Us</a></p>
+        <p>&copy; 2024 到府收垃圾服務</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
