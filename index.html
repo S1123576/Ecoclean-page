@@ -8,67 +8,65 @@
 </head>
 <body>
     <header class="hero-section">
+        <div class="language-switch">
+            <button id="lang-zh" class="lang-btn">中文</button>
+            <button id="lang-en" class="lang-btn">English</button>
+        </div>
         <div class="hero-content">
-            <h1>到府收垃圾服務</h1>
-            <p>輕鬆解決垃圾清運的煩惱，享受更便利的生活</p>
-            <a href="#about" class="hero-btn">了解我們</a>
+            <h1 data-lang="zh">到府收垃圾服務</h1>
+            <h1 data-lang="en" style="display: none;">Home Garbage Collection Service</h1>
+            <p data-lang="zh">輕鬆解決垃圾清運的煩惱，享受更便利的生活</p>
+            <p data-lang="en" style="display: none;">Easily solve garbage disposal problems and enjoy a more convenient life</p>
+            <a href="#booking" class="hero-btn" data-lang="zh">立即預約</a>
+            <a href="#booking" class="hero-btn" data-lang="en" style="display: none;">Book Now</a>
         </div>
     </header>
     <main>
         <!-- 關於我們 -->
         <section id="about" class="about-section">
-            <h2>關於我們</h2>
-            <p>我們專為現代忙碌人士及行動不便者提供到府收垃圾服務，讓您無需配合垃圾車的固定時間，享受更輕鬆的生活方式。</p>
-            <p>我們致力於打造一個更清潔、便利與高效的垃圾清運系統，為每個家庭提供量身訂做的服務。</p>
-        </section>
-        
-        <!-- 服務項目 -->
-        <section id="services" class="services-section">
-            <h2>我們的服務</h2>
-            <div class="service-item">
-                <h3>到府垃圾收取</h3>
-                <p>只需簡單預約，我們的專業人員將依指定時間到府收取垃圾，省時又方便。</p>
-            </div>
-            <div class="service-item">
-                <h3>資源回收</h3>
-                <p>為您妥善分類並處理資源回收，貢獻環境保護的同時讓您更省心。</p>
-            </div>
-            <div class="service-item">
-                <h3>特殊垃圾清運</h3>
-                <p>處理大型家具、電子垃圾及其他特殊垃圾，提供安全合法的清運方案。</p>
-            </div>
+            <h2 data-lang="zh">關於我們</h2>
+            <h2 data-lang="en" style="display: none;">About Us</h2>
+            <p data-lang="zh">我們專為現代忙碌人士及行動不便者提供到府收垃圾服務，讓您無需配合垃圾車的固定時間，享受更輕鬆的生活方式。</p>
+            <p data-lang="en" style="display: none;">We provide home garbage collection services tailored for busy individuals and those with limited mobility, freeing you from fixed garbage truck schedules.</p>
         </section>
 
-        <!-- 服務特色 -->
-        <section id="features" class="features-section">
-            <h2>我們的特色</h2>
-            <ul>
-                <li>即時預約：快速確認您的清運需求。</li>
-                <li>安全可靠：專業人員處理，保障服務品質。</li>
-                <li>環保優先：強調垃圾分類與環保清運。</li>
-            </ul>
-        </section>
-
-        <!-- 聯絡我們 -->
-        <section id="contact" class="contact-section">
-            <h2>聯絡我們</h2>
-            <p>立即聯繫我們，享受無憂的垃圾清運服務。</p>
-            <form action="#" method="POST">
-                <label for="name">姓名：</label>
+        <!-- 立即預約 -->
+        <section id="booking" class="booking-section">
+            <h2 data-lang="zh">立即預約</h2>
+            <h2 data-lang="en" style="display: none;">Book Now</h2>
+            <p data-lang="zh">填寫以下表單，快速預約到府垃圾清運服務。</p>
+            <p data-lang="en" style="display: none;">Fill out the form below to quickly book our home garbage collection service.</p>
+            <form action="success.html" method="POST">
+                <label for="name" data-lang="zh">姓名：</label>
+                <label for="name" data-lang="en" style="display: none;">Name:</label>
                 <input type="text" id="name" name="name" placeholder="您的姓名" required>
                 
-                <label for="email">電子郵件：</label>
-                <input type="email" id="email" name="email" placeholder="您的電子郵件" required>
+                <label for="phone" data-lang="zh">電話：</label>
+                <label for="phone" data-lang="en" style="display: none;">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="您的聯絡電話" required>
                 
-                <label for="message">留言：</label>
-                <textarea id="message" name="message" rows="5" placeholder="您的訊息" required></textarea>
+                <label for="address" data-lang="zh">地址：</label>
+                <label for="address" data-lang="en" style="display: none;">Address:</label>
+                <input type="text" id="address" name="address" placeholder="服務地址" required>
                 
-                <button type="submit">送出留言</button>
+                <label for="date" data-lang="zh">預約日期：</label>
+                <label for="date" data-lang="en" style="display: none;">Booking Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="time" data-lang="zh">預約時間：</label>
+                <label for="time" data-lang="en" style="display: none;">Booking Time:</label>
+                <input type="time" id="time" name="time" required>
+                
+                <button type="submit" data-lang="zh">送出預約</button>
+                <button type="submit" data-lang="en" style="display: none;">Submit Booking</button>
             </form>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 到府收垃圾服務 | <a href="#contact">聯絡我們</a></p>
+        <p>&copy; 2024 <span data-lang="zh">到府收垃圾服務</span><span data-lang="en" style="display: none;">Home Garbage Collection Service</span> | 
+        <a href="#contact" data-lang="zh">聯絡我們</a>
+        <a href="#contact" data-lang="en" style="display: none;">Contact Us</a></p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
