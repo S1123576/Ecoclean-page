@@ -1,4 +1,4 @@
-/* 重置樣式 */
+/* 基本樣式 */
 body {
     margin: 0;
     font-family: "微軟正黑體", Arial, sans-serif;
@@ -7,7 +7,7 @@ body {
     background: #f9f9f9;
 }
 
-/* 頂部橫幅 */
+/* 首頁橫幅 */
 header.hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero.jpg') no-repeat center center/cover;
     height: 100vh;
@@ -17,6 +17,25 @@ header.hero-section {
     color: white;
     text-align: center;
     position: relative;
+}
+
+header .hero-content {
+    max-width: 600px;
+}
+
+header .hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+header .hero-btn:hover {
+    background: #218838;
 }
 
 /* 語言切換按鈕 */
@@ -42,83 +61,19 @@ header.hero-section {
     background: #218838;
 }
 
-/* 主標題內容 */
-header .hero-content {
-    max-width: 600px;
+/* 預約成功樣式 */
+.booking-success-section.hidden {
+    display: none;
 }
 
-header .hero-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #28a745;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-header .hero-btn:hover {
-    background: #218838;
-}
-
-/* 主內容區域 */
-main {
-    padding: 20px;
-}
-
-section {
-    margin: 40px 0;
-    text-align: center;
-}
-
-section h2 {
-    margin-bottom: 20px;
-    color: #222;
-}
-
-.about-section p, .booking-section form {
-    max-width: 800px;
-    margin: 0 auto;
-    color: #555;
-}
-
-/* 預約表單樣式 */
-.booking-section form {
-    text-align: left;
-    margin-top: 20px;
-}
-
-.booking-section label {
-    display: block;
-    margin-top: 10px;
-    color: #333;
-}
-
-.booking-section input, .booking-section button {
+#map {
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    height: 400px;
 }
 
-.booking-section button {
-    background: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-    padding: 10px 15px;
-    transition: background 0.3s ease;
-}
-
-.booking-section button:hover {
-    background: #218838;
-}
-
-/* 頁腳樣式 */
 footer {
     text-align: center;
     padding: 10px;
@@ -126,13 +81,3 @@ footer {
     color: white;
     margin-top: 20px;
 }
-
-footer a {
-    color: #00d1ff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
