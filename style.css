@@ -81,3 +81,13 @@ footer {
     color: white;
     margin-top: 20px;
 }
+.tracking-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#map {
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
